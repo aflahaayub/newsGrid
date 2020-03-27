@@ -1,0 +1,72 @@
+.main-nav .container{
+    grid-template-columns: 1fr;
+}
+
+.main-nav .social-net{
+    display: none;
+}
+
+.main-nav .container .logo{
+    margin-bottom: 1rem;
+}
+.main-nav .container ul,
+.main-nav .container .logo{
+    justify-self: center;
+}
+
+.main-nav .container ul li a{
+    padding: 0.5rem;
+}
+
+.home-article .article-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.home-article .article-container .card:first-child,.home-article .article-container .card:last-child{
+    grid-template-columns: 1fr; 
+    grid-column: 1;
+}
+
+/* article */
+.one-article .container .page-content section > h1{
+    line-height: 3.5rem;
+}
+
+@media(max-width:600px){
+    h1{
+        line-height: 3.5rem;
+    }
+
+    .showcase .showcase-container{
+        grid-template-columns: 1fr;
+    }
+    .home-article .article-container,
+    .footer .foot-content{
+        grid-template-columns: 1fr;
+    }
+    
+    .footer .foot-content div:first-child,
+    .footer .foot-content div:nth-child(2){
+        border-bottom: 2px solid #444;
+        padding-bottom: 1.2rem;
+    }
+
+    .page-content{
+        grid-template-columns: 1fr;
+    }
+
+    .page-content .card section > h1{
+        line-height: 3.5rem;
+        text-align: center;
+    }
+
+    .page-content .card section .writter{
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .page-content .card section .writter > small{
+        margin-bottom: 0.7rem;
+    }
+}    

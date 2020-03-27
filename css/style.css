@@ -1,0 +1,377 @@
+:root{
+    --primary-color: #c72727;
+    --secondary-color: #f99500;
+    --light-color: #f3f3f3;
+    --dark-color: #333;
+    --max-width: 1100px;
+}
+
+.category{
+    --sport-color: #f99500;
+    --ent-color: #a66bbe;
+    --tech-color: #009cff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5rem;
+    background: var(--light-color);
+}
+
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+
+li{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Staatliches', Arial;
+    line-height: 2rem;
+    padding: 1rem 0;
+    /* font-size: 2rem; */
+}
+
+.l-2{font-size: 2rem;}
+.l-3{font-size: 3rem;}
+.l-4{font-size: 4rem;}
+
+.py-05{padding: 0.5rem 0;}
+.py-2{padding: 1.5rem 0;}
+.py-3{padding: 2rem 0;}
+.py-4{padding: 3rem 0;}
+
+
+/* inner page grid content */
+
+.page-content{
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-gap: 2rem;
+    margin: 2rem 0;
+}
+
+.page-content > *:first-child{
+    grid-row: 1 / span 3;
+}
+/* utilities */
+.container{
+    padding: 0 2rem;
+    /* margin: 1rem; */
+    max-width: var(--max-width);
+    overflow: hidden;
+    margin: auto;
+}
+
+.btn{
+    background: #333;
+    color: white;
+    padding: 0.7rem 1.2rem;
+}
+
+.card{
+    background: #fff;
+    padding: 1rem;
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+.btn-primary{background: var(--primary-color);}
+.btn-secondary{background: var(--secondary-color)}
+.btn-light{background: var(--light-color);}
+
+.category{
+    display: inline-block;
+    border-radius: 15px;
+    padding: 0.1rem 0.4rem;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    color: #fff;
+}
+
+.category-sports{background: var(--secondary-color);}
+.category-ent{background: var(--ent-color);}
+.category-tech{background: var(--tech-color);}
+
+
+.bg-dark{background: var(--dark-color);
+    color:#fff;
+}
+.bg-primary{background: var(--primary-color);
+    color:#fff;
+}
+.bg-secondary{background: var(--secondary-color);
+    color:#fff;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a{
+    color: #fff;
+}
+
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a{
+    color: #fff;
+}
+
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a{
+    color: #fff;
+}
+
+/* NAVBAR */
+.main-nav{
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.main-nav .container{
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr;
+    padding: 1rem;
+    align-items: center;
+}
+
+.main-nav .container .logo{
+    width: 180px;
+}
+
+.main-nav .container a{
+    color: var(--dark-color);
+    padding: 0 .5rem;
+}
+
+.main-nav .container ul{
+    display: flex;
+    justify-self: end;
+}
+
+.main-nav .container ul li{
+    font-size: 1.1rem;
+}
+
+.main-nav .container ul li a{
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: bold;
+    padding: 0.75rem ;
+}
+
+.main-nav .container ul li a.current-page{
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+.main-nav .container ul li a:hover{
+    background: var(--light-color);
+    color: black;
+}
+
+.main-nav .container .social-net a{
+    color: #666;
+    margin-right: 0.5rem;
+}
+
+/* SHOWCASE */
+
+.showcase{
+    background: #333;
+    position: relative;
+    padding: 2rem;
+    color: #fff;
+}
+
+.showcase::before{ /*OVERLAY*/
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../image_resources/featured.jpg) no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+}
+
+.showcase .showcase-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+.showcase .showcase-content{
+    z-index: 1;
+}
+
+.showcase .showcase-content p{
+    padding-bottom: 1.7rem;
+}
+
+
+/* Home Article */
+.home-article{
+    padding: 1rem 0;
+}
+
+
+.article-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* dibagi 3 tiap baris */
+    grid-gap: 1.3rem;
+    
+}
+
+
+
+.home-article .article-container .card:first-child,.home-article .article-container .card:last-child{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* dibagi dua untuk satu article */
+    grid-column: 1 / span 2;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-article .article-container .card:last-child{
+    grid-column: 2 / span 2;
+}
+
+/* FOOTER */
+
+.footer{
+    background:var(--dark-color) ;
+    color: #fff;
+    margin-top: 1.75rem;
+}
+
+.footer .foot-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    padding: 1.2rem 0;    
+    justify-content: center;
+}
+
+
+.footer .foot-content img{
+    width: 150px;
+    margin-bottom: 0.5rem;
+}
+
+.footer .foot-content h3{
+    padding: 0.3rem 0;
+    font-size: 1.3rem;
+}
+
+.footer .foot-content form{
+    padding: 0.75rem 0;
+}
+
+.footer .foot-content form input{
+    width: 220px;   
+}
+
+.footer .foot-content form input:first-child{
+    padding: 0.5rem;
+    margin-bottom: 0.55rem;
+}
+
+.footer .foot-content form input:last-child{
+    border: none;
+    padding: 0.7rem;
+}
+
+.footer .foot-content a {
+    color: #fff;
+}
+
+.footer .foot-content .btn-secondary{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+}
+
+.footer .foot-content div ul li{
+    padding: 0.55rem 0;
+    border-bottom: 1px solid #444;
+}
+
+.footer .foot-content div ul li a:hover{
+    color: var(--primary-color);
+}
+
+.foot{
+    background: #444;
+    text-align: center;
+    color: #fff;
+    padding: 0.8rem;
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+
+/* ABOUT */
+
+.about-article aside a{
+    display: block;
+    margin-top: 1.2rem;
+}
+
+
+/* Article */
+.one-article section > .writter{
+    background: var(--light-color);
+    padding: 1.2rem 0.55rem;
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.one-article #categories ul li{
+    border-bottom: 1px dotted #555;
+    padding-bottom: 0.4rem;
+}
+
+.one-article #categories ul li a{
+    display: inline-block;
+    margin: 0.4rem 0;
+} 
+.one-article #categories ul li a:hover{
+    color: var(--primary-color);
+}
+
+.one-article aside .bg-secondary a{
+    display: block;
+    margin-top: 0.8rem;
+    text-align: center;
+}
+
+.one-article aside .bg-secondary{
+    margin-top: 1.4rem;
+}
